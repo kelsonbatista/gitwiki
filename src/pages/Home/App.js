@@ -38,6 +38,12 @@ function App() {
       }
     }
   };
+  
+
+  const handleRemoveRepo = (id) => {
+    setRepos((prev) => prev.filter((repo) => repo.id !== id));
+  }
+  
 
   return (
     <Container>
@@ -49,7 +55,11 @@ function App() {
       <Button onClick={handleSearchRepos} />
       <Error>{error && <p>{error}</p>}</Error>
       {repos.map((repo) => (
-        <ItemRepo repo={repo} key={repo.id} />
+        <ItemRepo
+          repo={repo}
+          key={repo.id}
+          handleRemoveRepo={handleRemoveRepo}
+        />
       ))}
     </Container>
   );
