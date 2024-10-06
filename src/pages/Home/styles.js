@@ -9,3 +9,7 @@ export const Container = styled.div`
     height: 90vh;
     margin: 20px 0;
   `
+export const Error = styled.p`
+    color: #FFF;
+    font-size: 26px;
+  `;

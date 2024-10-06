@@ -1,10 +1,12 @@
 import React from 'react';
 import { InputContainer } from './styles';
 
-function Input() {
+function Input(props) {
+  const {value, onChange} = props;
+
   return (
     <InputContainer>
-      <input />
+      <input value={value} onChange={onChange}/>
     </InputContainer>
   )
 }
